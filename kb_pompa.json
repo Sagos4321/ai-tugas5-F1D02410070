@@ -1,0 +1,53 @@
+{
+  "judul": "Diagnosis Kerusakan Mesin Pompa Air",
+  "batas": "Aturan berasal dari Jurnal JTMSI Universitas Bojonegoro (studi kasus pompa PDAM) serta dokumentasi teknis Shimizu Indonesia dan Kingda Pump. Hanya mencakup masalah house bearing berasap, terminal elektromotor panas, impeller macet, dan kehilangan daya hisap. Hasilnya berupa saran awal, bukan keputusan akhir teknisi.",
+  "sumber": {
+    "S1": "Analisa Kerusakan Pompa Dengan Menggunakan Metode FMEA, Jurnal Teknologi dan Manajemen Sistem Industri (JTMSI) Universitas Bojonegoro Vol. 1 No. 2, 2022",
+    "S2": "5 Penyebab Pompa Air Macet dan Tidak Bekerja Optimal, Shimizu Indonesia, https://shimizu.co.id/artikel/5-penyebab-pompa-air-macet-dan-tidak-bekerja-optimal/, diakses 14 Nov 2026",
+    "S3": "Kegagalan Pompa (Troubleshooting), Kingda Pump Official, https://kingdapump.com/id/kegagalan-pompa/, diakses 14 Nov 2026"
+  },
+  "aturan": [
+    {
+      "id": "R1",
+      "jika": ["kurangnya pelumas", "minyak pelumas terkontaminasi kotoran"],
+      "mode": "atau",
+      "maka": "keluar asap dari house bearing",
+      "sumber": "S1"
+    },
+    {
+      "id": "R2",
+      "jika": ["keluar asap dari house bearing", "pompa bersuara keras dan kasar"],
+      "mode": "dan",
+      "maka": "kerusakan dan rawan konsleting pada house bearing",
+      "sumber": "S1"
+    },
+    {
+      "id": "R3",
+      "jika": ["baut pada terminal longgar", "gangguan kabel mesin elektromotor"],
+      "mode": "atau",
+      "maka": "terminal elmo panas",
+      "sumber": "S1"
+    },
+    {
+      "id": "R4",
+      "jika": ["terminal elmo panas", "tegangan listrik tidak stabil"],
+      "mode": "dan",
+      "maka": "mesin elektromotor rawan konsleting atau terbakar",
+      "sumber": "S1"
+    },
+    {
+      "id": "R5",
+      "jika": ["mesin pompa berdengung", "kipas impeller terganjal kotoran"],
+      "mode": "dan",
+      "maka": "pompa air macet dan kapasitor melemah",
+      "sumber": "S2"
+    },
+    {
+      "id": "R6",
+      "jika": ["air pancingan tidak keluar", "pipa hisap bocor kemasukan udara"],
+      "mode": "dan",
+      "maka": "kegagalan daya hisap pompa",
+      "sumber": "S3"
+    }
+  ]
+}
